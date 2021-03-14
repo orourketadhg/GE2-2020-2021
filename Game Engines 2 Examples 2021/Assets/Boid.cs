@@ -21,13 +21,10 @@ public class Boid : MonoBehaviour
 
     public void OnDrawGizmos()
     {
-        Gizmos.color = Color.magenta;
+        Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, transform.position + velocity);
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position + acceleration);
-
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + force * 10);
     }
 
@@ -89,7 +86,13 @@ public class Boid : MonoBehaviour
         {
             if (b.isActiveAndEnabled)
             {
-                force += b.Calculate() * b.weight;                               
+                force += b.Calculate() * b.weight;      
+                float f = force.magnitude;
+                if (f >= maxForce)
+                {
+                    force = Vector3.ClampMagnitude(force, maxForce);
+                    break;
+                }                         
             }
         }
 
