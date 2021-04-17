@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.Game Engines 2 Examples 2021.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\College\BSc. Computer Science\4th Year\Semester 2\Games Engines 2\GE2-2020-2021\Game Engines 2 Examples 2021\.idea\.idea.Game Engines 2 Examples 2021\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
